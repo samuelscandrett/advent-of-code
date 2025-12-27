@@ -1,6 +1,6 @@
 import argparse
 import importlib
-
+import sys
 
 def extract_from_file(file):
     """
@@ -24,7 +24,7 @@ if __name__ == "__main__":
     parser.add_argument("--year", "-y", type=int, help="Enter the year to run.")
     parser.add_argument("--day", "-d", type=int, help="Enter the day to run.")
     parser.add_argument("--example", "-e", action='store_true', help="Use the example input rather than main (optional).")
-    args = parser.parse_args()
+    args = parser.parse_args(args=None if sys.argv[1:] else ['--help'])
 
     #TODO enforce year as 4 figs
     # add help to command run without args
