@@ -1,8 +1,3 @@
-import sys
-import os
-import readline
-
-
 def polymerisation(polymer_template, no_runs):
     count = 0
     while count < no_runs:
